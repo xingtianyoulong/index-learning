@@ -1,0 +1,52 @@
+##########################################################################
+# Framework
+##########################################################################
+
+# Folder
+/node_modules
+/public/hot
+/public/storage
+/public/_nuxt
+/vendor
+
+# File
+.env
+.env.testing
+.phpunit.result.cache
+.php_cs.cache
+.DS_Store
+/storage/*.key
+*.bak
+
+##########################################################################
+# IDE
+##########################################################################
+
+# Folder
+/.sync
+/.idea
+/.vscode
+/.vagrant
+
+# File
+Icon?
+nbproject
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+sftp-config.json
+*.sublime-project
+*.sublime-workspace
+
+##########################################################################
+# Big Files
+##########################################################################
+
+# Folder
+
+# File
+*.pdf
+*.zip
+*.rar
+*.tar

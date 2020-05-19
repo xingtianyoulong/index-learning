@@ -71,21 +71,21 @@ DROP DATABASE `www.hello.com`;
 
 ##### DDL
 ```SQL
--- @CREATE ç
+-- @CREATE
 CREATE TABLE `company` (
     `company_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
     `company_name` varchar(100) NOT NULL COMMENT 'Company Name',
-    `company_code` varchar(50) NOT NULL,
+    `company_code` varchar(50) NOT NULL COMMENT 'COmpany Code',
     `effective_time` datetime NOT NULL COMMENT 'Effective Time',
     `expired_time` datetime NOT NULL COMMENT 'Expired Time',
-    `hidden` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Whether Hide',
-    `disabled` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Whether Disable',
-    `deleted` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Whether Delete',
+    `hidden` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Whether Hide',
+    `disabled` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Whether Disable',
+    `deleted` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT 'Whether Delete',
     `deleted_at` timestamp NULL DEFAULT NULL COMMENT 'Deleted Time',
     `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Created Time',
-    `created_by` int(10) unsigned NOT NULL COMMENT 'Created User ID',
+    `created_by` int(11) unsigned NOT NULL COMMENT 'Created User ID',
     `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Updated Time',
-    `updated_by` int(10) unsigned NOT NULL COMMENT 'Updated User ID',
+    `updated_by` int(11) unsigned NOT NULL COMMENT 'Updated User ID',
     PRIMARY KEY (`company_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 

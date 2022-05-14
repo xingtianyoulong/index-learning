@@ -47,6 +47,7 @@ sftp-config.json
 
 # File
 *.pdf
+*.epub
 *.zip
 *.rar
 *.tar
